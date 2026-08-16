@@ -1,1 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #FFF8E7;
+  color: #33302E;
+}
 
+h1, h2 {
+     font-family: 'poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33302E;
+    padding: 15px 40px;
+}
+#logo {
+    color: #FFF8E7;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+#navbar ul li a {
+    color: #FFF8E7;
+    font-weight: 600;
+}
+/* advanced hover transition on nav links */
+#navbar ul li a:hover { 
+    color: #FF6B4A; 
+    transition: color 0.2s ease;
+}
+/* HERO */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    /*advanced: gradient background, required by the assessment brief */
+    background: linear-gradient(140deg, #FFF8E7,#B8E3D0);
+}
+#hero h1 {
+     font-size: 36px;
+}
+#hero p {
+    max-width: 610px;
+    margin: 15px auto ;
+}
+#explore-btn {
+     display: inline-block;
+     background-color: #FF6B4A;
+     color: #FFF8E7;
+     padding: 12px 29px;
+       /* advanced: large border-radius makes a pill-shaped button */
+       border-radius: 998px;
+       font-weight: bold;
+       /* advanced: shadow gives the button depth so it looks clickable */
+       box-shadow: 0 4px 10px rgba(255, 107, 74, 0.35);
+}
+/* SUBJECT CARDS */
+#subjects {
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    padding: 45px 25px;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: FFFFFF;
+    width: 265px;
+    border-radius: 18px;
+    overflow: hidden;
+    /* advanced: soft shadow lifts the card off the background */
+    box-shadow:0 5px 16px rgba(0, 0, 0, 0.1) ;
+    /* advanced: smooth hover animation */
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px)
+}
+.card-img {
+  height: 150px;
+}
+.biology-img { background-color: #B8E3D0; }
+.chemistry-img { background-color: #FFD9CC; }
+.physics-img { background-color: #D6E4F0; }
+
+.card h2{
+    margin: 13px 16px 5px 16px;
+}
+.card p {
+     margin: 0 16px 16px 16px;
+}
+
+/* CAREERS STRIP */
+#careers {
+    background-color: #33302E;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 35px 25px;
+    margin: 0 45px 45px 45px;
+    border-radius: 17px;
+}
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+    color: #5F5E5A;
+}
+/* advanced: responsive layout so the nav stacks on small screens */
+@media (max-width: 600px){
+    #navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+#navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+}
