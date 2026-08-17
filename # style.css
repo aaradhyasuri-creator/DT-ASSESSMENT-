@@ -79,7 +79,7 @@ a {
     flex-wrap: wrap;
 }
 .card {
-    background-color: FFFFFF;
+    background-color: #FFFFFF;
     width: 265px;
     border-radius: 18px;
     overflow: hidden;
@@ -122,13 +122,56 @@ a {
     color: #5F5E5A;
 }
 /* advanced: responsive layout so the nav stacks on small screens */
-@media (max-width: 600px){
+@media (max-width:605px) {
     #navbar {
         flex-direction: column;
-        gap: 15px;
+        gap: 17px;
+    }
+    #navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
-#navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
+.subject-img {
+    height: 225px;
+    margin: 0 45px 35px 45px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+}
+.biology-photo { background-color: #B8E3D0; }
+.chemistry-photo { background-color: #FFD9CC; }
+.physics-photo { background-color: #D6E4F0; }
+
+/* SUBJECT PAGE HEADER */
+#subject-title {
+    padding: 45px;
+}
+#subject-title h1 {
+    font-size: 35px;
+}
+#subject-title p {
+    color: #5F5E5A;
+    font-size: 17px;
+}
+
+/* NCEA STANDARDS + CAREER PATHWAYS SECTIONS */
+.info-block {
+    background-color: #FFFFFF;
+    margin: 0 45px 25px 45px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+}
+.info-block h2 {
+    margin-bottom: 14px;
+}
+
+/* STUDENT QUOTE */
+#quote {
+    background-color: #B8E3D0;
+    margin: 0 42px 42px 42px;
+    padding: 25px;
+    border-radius: 16px;
+    font-style: italic;
 }
