@@ -434,3 +434,286 @@ html {
   font-size: 14px;
   color: #5F5E5A;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #FFF8E7;
+  color: #33302E;
+}
+
+h1, h2 {
+     font-family: 'poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33302E;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+#logo {
+    color: #FFF8E7;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+#navbar ul li a {
+    color: #FFF8E7;
+    font-weight: 600;
+    position: relative;
+}
+#navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #FF6B4A;
+  transition: width 0.25s ease;
+}
+#navbar ul li a:hover::after {
+  width: 100%;
+}
+/* advanced hover transition on nav links */
+#navbar ul li a:hover { 
+    color: #FF6B4A; 
+    transition: color 0.2s ease;
+}
+/* HERO */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    /*advanced: gradient background, required by the assessment brief */
+    background: linear-gradient(270deg, #FFF8E7, #B8E3D0, #FF6B4A, #FFF8E7);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+#hero h1 {
+     font-size: 36px;
+}
+#hero p {
+    max-width: 610px;
+    margin: 15px auto ;
+}
+#explore-btn {
+  display: inline-block;
+  background-color: #FF6B4A;
+  color: #FFF8E7;
+  padding: 12px 29px;
+  border-radius: 998px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 107, 74, 0.35);
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 4px 10px rgba(255, 107, 74, 0.35); }
+  50% { box-shadow: 0 4px 18px rgba(255, 107, 74, 0.6); }
+}
+/* SUBJECT CARDS */
+#subjects {
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+    padding: 45px 25px;
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #FFFFFF;
+    width: 265px;
+    border-radius: 18px;
+    overflow: hidden;
+    /* advanced: soft shadow lifts the card off the background */
+    box-shadow:0 5px 16px rgba(0, 0, 0, 0.1) ;
+    /* advanced: smooth hover animation */
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px)
+}
+
+
+.card h2{
+    margin: 13px 16px 5px 16px;
+}
+.card p {
+     margin: 0 16px 16px 16px;
+}
+
+/* CAREERS STRIP */
+#careers {
+    background-color: #33302E;
+    color: #FFF8E7;
+    text-align: center;
+    padding: 35px 25px;
+    margin: 0 45px 45px 45px;
+    border-radius: 17px;
+}
+/* FOOTER */
+#footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+    color: #5F5E5A;
+}
+/* advanced: responsive layout so the nav stacks on small screens */
+@media (max-width:605px) {
+    #navbar {
+        flex-direction: column;
+        gap: 17px;
+    }
+    #navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* SUBJECT PAGE HEADER */
+#subject-title {
+    padding: 45px;
+}
+#subject-title h1 {
+    font-size: 35px;
+}
+#subject-title p {
+    color: #5F5E5A;
+    font-size: 17px;
+}
+
+/* NCEA STANDARDS + CAREER PATHWAYS SECTIONS */
+.info-block {
+    background-color: #FFFFFF;
+    margin: 0 45px 25px 45px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+}
+.info-block h2 {
+    margin-bottom: 14px;
+}
+
+/* STUDENT QUOTE */
+#quote {
+    background-color: #B8E3D0;
+    margin: 0 42px 42px 42px;
+    padding: 25px;
+    border-radius: 16px;
+    font-style: italic;
+}
+/* IMAGES */
+.card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+.card:hover .card-img {
+  transform: scale(1.07);
+  filter: brightness(0.92);
+}
+.subject-img {
+  display: block;
+  width: calc(100% - 90px);
+  height: 225px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  margin: 0 45px 35px 45px;
+}
+.card {
+  cursor: pointer;
+}
+html {
+  scroll-behavior: smooth;
+}
+.info-block {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.info-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ANIMATION */
+#hero, .card, .info-block, #quote {
+    animation: fadeInUp 0.8s ease both;
+}
+.card:nth-child(2){animation-delay: 0.16s;}
+.card:nth-child(3){animation-delay: 0.4s;}
+.card:nth-child(2){animation-delay: 0.16s;}
+@keyframes fadeInUp {
+    from{opacity:0; transform: translateY(21px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+#stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  text-align: center;
+}
+#stats span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #FF6B4A;
+  display: block;
+}
+#stats p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #5F5E5A;
+}
+/* DYSLEXIA TOGGLE */
+#accessibility-toggle {
+  text-align: right;
+  padding: 8px 20px;
+  background-color: #33302E;
+  font-size: 13px;
+}
+#accessibility-toggle label {
+  color: #FFF8E7;
+  cursor: pointer;
+  user-select: none;
+}
+#accessibility-toggle input {
+  cursor: pointer;
+  margin-right: 6px;
+}
+#dyslexia-check:checked ~ * ,
+body:has(#dyslexia-check:checked) {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+}
+body:has(#dyslexia-check:checked) h1,
+body:has(#dyslexia-check:checked) h2 {
+  font-family: 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+}
